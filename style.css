@@ -73,7 +73,6 @@ body {
     border-top-left-radius: 48px;
     border-bottom-left-radius: 48px;
     display: flex;
-    height: 100vh;
     overflow-y: auto;
     width: 100%;
     z-index: 2;
@@ -283,4 +282,113 @@ button:active {
 
 .action-item i {
     margin-right: 16px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+}
+
+nav .actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 32px;
+    margin-left: auto;
+    color: #888;
+}
+
+nav .actions i {
+    cursor: pointer;
+}
+
+nav .search-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    min-width: 40%;
+}
+
+nav .search-input input {
+    border-radius: 8px;
+    padding: 12px 16px;
+    border: none;
+    padding-left: 48px;
+    width: 100%;
+}
+
+nav .search-input i {
+    position: absolute;
+    left: 16px;
+    color: #888;
+}
+
+nav .user-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+nav .user-container img {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    margin-left: 16px;
+}
+
+nav .user-container span {
+    color: #888;
+}
+
+nav .user-container p {
+    font-weight: bold;
+}
+
+.main-content .left-content {
+    width: 100%;
+    padding: 40px;
+}
+
+.main-content .right-content {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-top-left-radius: 48px;
+    border-bottom-left-radius: 48px;
+    width: 320px;
+    padding: 36px 24px;
+    overflow: auto;
+}
+
+.tabs {
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    margin: 16px 0px;
+}
+
+.tab {
+    padding: 8px 16px;
+    line-height: 14px;
+    border-radius: 8px;
+    color: #888;
+    margin-right: 8px;
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+
+.tab:hover {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+}
+
+.selected-tab {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    font-weight: bold;
 }
