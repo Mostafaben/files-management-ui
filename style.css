@@ -360,16 +360,44 @@ nav .user-container p {
     background-color: white;
     border-top-left-radius: 48px;
     border-bottom-left-radius: 48px;
-    width: 320px;
-    padding: 36px 24px;
+    width: 400px;
+    max-height: 100vh;
     overflow: auto;
+    position: relative;
+}
+
+.right-content .close-icon {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+    color: #888;
+    background-color: var(--bg-color);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+
+.right-content .close-icon:active {
+    transform: translateY(2px) scale(0.95);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.right-content h3 {
+    margin: 40px 24px;
+    margin-bottom: 16px;
 }
 
 .tabs {
     flex-direction: row;
     align-items: center;
     display: flex;
-    margin: 16px 0px;
+    margin: 16px 24px;
 }
 
 .tab {
@@ -391,4 +419,117 @@ nav .user-container p {
     background-color: var(--bg-color);
     color: var(--primary-color);
     font-weight: bold;
+}
+
+.activities {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    padding-bottom: 0px;
+    max-height: 82vh;
+    overflow: auto;
+}
+
+.activity {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    padding-right: 16px;
+    padding-top: 0px;
+    border-left: 1.4px solid var(--bg-color);
+    position: relative;
+}
+
+.activity .images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.activity h5 {
+    margin-top: 0px;
+    margin-bottom: 16px;
+    color: var(--primary-color);
+}
+
+.activity .images img {
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 16px;
+    transition-duration: 300ms;
+    cursor: pointer;
+}
+
+.activity .images img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.activity .activity-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px 0px;
+}
+
+.activity-content i {
+    color: var(--primary-color);
+    margin-right: 8px;
+}
+
+.activity-content p {
+    color: #888;
+}
+
+.state {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: -10px;
+    top: 0px;
+    border-radius: 6px;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.activity .state .seen {
+    background-color: white;
+    border: 5px solid var(--primary-color);
+    height: 4px;
+    width: 4px;
+    border-radius: 4px;
+}
+
+
+/* width */
+
+*::-webkit-scrollbar {
+    width: 4px;
+}
+
+
+/* Track */
+
+*::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+
+/* Handle */
+
+*::-webkit-scrollbar-thumb {
+    background: var(--light-primary);
+    border-radius: 1px;
+}
+
+
+/* Handle on hover */
+
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
 }
