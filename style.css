@@ -257,13 +257,13 @@ button:active {
     transform: scale(0.99) translateY(-2px);
 }
 
-.button-primary:active i {
+.button-primary:active i,
+.button-primary:focus i {
     animation: animatePlus 1s alternate-reverse infinite;
 }
 
 @keyframes animatePlus {
-    0% {}
-    50% {
+    0% {
         transform: rotate(90deg);
     }
     100% {
