@@ -97,7 +97,7 @@
           </div>
 
           <div class="actions">
-            <i class="fas fa-bell"></i>
+            <i class="fas fa-bell" onclick="closeNotificationPanel()"></i>
           </div>
           <div class="user-container">
             <div class="text">
@@ -108,8 +108,8 @@
           </div>
         </nav>
       </div>
-      <div class="right-content">
-        <i class="fas fa-chevron-right close-icon"></i>
+      <div class="right-content closed-panel" id="notificationPanel">
+        <i class="fas fa-chevron-right close-icon" onclick="closeNotificationPanel()"></i>
 
         <h3>One Drive</h3>
         <div class="tabs">

@@ -78,6 +78,7 @@ body {
     z-index: 2;
     margin-left: 180px;
     transition-duration: 200ms;
+    overflow-x: hidden;
 }
 
 .main-content-minimized {
@@ -353,6 +354,7 @@ nav .user-container p {
 .main-content .left-content {
     width: 100%;
     padding: 40px;
+    transition-duration: 300ms;
 }
 
 .main-content .right-content {
@@ -365,7 +367,16 @@ nav .user-container p {
     max-height: 100vh;
     overflow: auto;
     position: relative;
+    transition-duration: 300ms;
+    animation: enter-panel 200ms ease-in-out;
 }
+
+@keyframes enter-panel {
+    0%{
+        transform: translateX(240px);
+    }
+}
+
 
 .right-content .close-icon {
     position: absolute;
@@ -565,4 +576,10 @@ nav .user-container p {
     border-radius: 50%;
     background-color: var(--light-primary);
     color: white;
+}
+
+
+.closed-panel {
+    transform: translateX(300px);
+    overflow: hidden !important;
 }
