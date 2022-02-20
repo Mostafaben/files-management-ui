@@ -427,7 +427,7 @@ nav .user-container p {
     flex-direction: column;
     padding: 24px;
     padding-bottom: 0px;
-    max-height: 82vh;
+    max-height: 100%;
     overflow: auto;
 }
 
